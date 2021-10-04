@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* width */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* * {
+    border: 1px solid black;
+} */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #000000;
+  color: #00ff00;
+  height: 100vh;
+}
+
+button {
+  padding: 5px 7px;
+  margin: 7px;
+  color: #00ff00;
+  border: #00ff00 2px solid;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 255, 0, 0.8);
+          box-shadow: 0 0 5px 1px rgba(0, 255, 0, 0.8);
+  cursor: pointer;
+}
+
+header {
+  height: 40px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .name {
+  padding: 0 0 0 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 12px;
+}
+
+header .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .buttons button {
+  padding: 4px 7px;
+  margin: 7px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px auto;
+      grid-template-columns: 350px auto;
+  -ms-grid-rows: 350px auto;
+      grid-template-rows: 350px auto;
+  height: calc(100% - 40px);
+}
+
+.qr {
+  width: 350px;
+  height: 350px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.logo {
+  max-width: 700px;
+  width: 80%;
+}
+
+.playerlist {
+  width: 350px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+}
+
+.playerlist .player {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0 5px 15px;
+  border-bottom: 2px solid #00ff00;
+}
+
+.playerlist .player span {
+  padding: 12px 0;
+}
+
+.playerlist .player .name {
+  width: 100px;
+  overflow: hidden;
+}
+
+.playerlist .player button {
+  padding: 0 30px;
+  margin: 2px;
+}
+
+.playerinfo {
+  margin: 0 auto;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.playerinfo button {
+  padding: 30px 100px;
+}
+
+#gameinfo {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  text-align: center;
+  font-weight: bold;
+}
+
+#gameinfo .progress {
+  border: #00ff00 2px solid;
+  margin: 0 20px;
+  padding: 5px;
+}
+
+#gameinfo .progress > * {
+  overflow: hidden;
+}
+
+#gameinfo .progress > * > * {
+  background-color: #00ff00;
+  height: 20px;
+}
+/*# sourceMappingURL=style.css.map */

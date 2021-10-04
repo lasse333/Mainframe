@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "_var", "_scrollbar";
+
+/* * {
+    border: 1px solid black;
+} */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: $bg_color;
+    color: $vis_color;
+    height: 100vh;
+}
+
+button {
+    padding: 5px 7px;
+    margin: 7px;
+    color: $vis_color;
+    border: $vis_color 2px solid;
+    transition: 200ms;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+
+    &:hover {
+
+        box-shadow: 0 0 5px 1px rgba($vis_color, $alpha: 0.8);
+        cursor: pointer;
+
+    }
+}
+
+header {
+    height: 40px;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+
+    .name {
+        padding: 0 0 0 20px;
+        font-weight: bold;
+        display: inline-block;
+        margin: 12px;
+    }
+
+    .buttons {
+
+        display: flex;
+
+        button {
+            padding: 4px 7px;
+            margin: 7px;
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-rows: 350px auto;
+    height: calc(100% - 40px);
+}
+
+.qr {
+    width: 350px;
+    height: 350px;
+    grid-column: 1/2;
+}
+
+.logo {
+    max-width: 700px;
+    width: 80%;
+}
+
+.playerlist {
+    width: 350px;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    .player {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0 5px 15px;
+        border-bottom: 2px solid $vis_color;
+
+
+        span {
+            padding: 12px 0;
+        }
+
+        .name {
+            width: 100px;
+            overflow: hidden;
+        }
+
+        button {
+            padding: 0 30px;
+            margin: 2px;
+        }
+    }
+}
+
+.playerinfo {
+    margin: 0 auto;
+    grid-column: 1/-1;
+    text-align: center;
+
+    button {
+        padding: 30px 100px;
+    }
+}
+
+#gameinfo {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    text-align: center;
+    font-weight: bold;
+
+    .progress {
+        border: $vis_color 2px solid;
+        margin: 0 20px;
+        padding: 5px;
+
+        &>* {
+            overflow: hidden;
+        }
+
+        &>*>* {
+            background-color: $vis_color;
+            height: 20px;
+        }
+    }
+}
+
+// #crt{
+//     mask-image: repeating-linear-gradient(to bottom, black, white 10px, black 10px, white 20px);
+//     mask-size: cover;
+//     mask-type: luminance;
+// }
